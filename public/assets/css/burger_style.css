@@ -1,0 +1,20 @@
+.btn {
+    background-color: green;
+    margin: 2 rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: none; 
+}
+
+
+img {
+    height: 10rem; 
+    width: 10rem;
+    border-radius: 4rem;
+    
+}
