@@ -9,17 +9,14 @@
   },
   "test": {
     "username": "root",
-    "password": "root",
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "password": null,
+    "database": "testdb",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false
   },
   "production": {
-    "username": "hcbj9uxu08uhsq5o",
-    "password": "m609h92tseiyb2zb",
-    "database": "zph90fopzghv9d6h",
-    "host": "a5s42n4idx9husyc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
-
   }
 }
