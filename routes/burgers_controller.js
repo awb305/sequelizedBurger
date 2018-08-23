@@ -31,7 +31,7 @@ router.post("/api/burgers/:name", function (req, res) {
   db.Burgers.create({
     burger_name: req.params.name
   }).then(function (dbPost) {
-    res.status(200).end();
+    res.json(dbPost);
   })
 });
 
@@ -42,7 +42,9 @@ router.put("/api/burgers/:id", function (req, res) {
   }, {
     where: {
       id: req.params.id,
-    }
+    },
+    returning: true,
+    plain: true
   }).then(function (dbUpdate) {
     res.json(dbUpdate);
   });
