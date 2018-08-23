@@ -12,15 +12,12 @@ let db = require("../models");
 // index route loads view.html
 router.get("/", function (req, res) {
   res.render("index");
-
-  console.log("you got here");
 });
 
 router.get("/api/burgers", function (req, res) {
   console.log("dbBurgers:", db.Burgers);
 
   db.Burgers.findAll({}).then(function (burgerObject) {
-    console.log(burgerObject);
     res.json(burgerObject);
   })
 });
