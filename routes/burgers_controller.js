@@ -54,6 +54,16 @@ router.delete("/api/delete", function (req, res) {
   }).then(function(dbDelete){
     res.json(dbDelete);
   })
+});
+
+router.delete("/api/delete:id", function (req, res) {
+  db.Burgers.destroy({
+    where: {
+      id: req.params.id
+    }
+  }).then(function(dbDelete){
+    res.json(dbDelete);
+  })
 })
 
 

@@ -27,6 +27,12 @@ const createBurger = (id, burger_name) => {
   button.text("Devour it!");
   $("#button-item-" + id).append(button);
 
+  let clearButton = $("<button>");
+  clearButton.attr("data", id);
+  clearButton.addClass("btn btn-primary btn-clear");
+  clearButton.text("Clear");
+  $("#button-item-" + id).append(clearButton);
+
 }
 
 const devour = (id) => {
@@ -122,6 +128,22 @@ $(function () {
         console.log(res);
         let items = $('#burger-section');
         items.empty();
+      },
+      error: (res, status, err) => {
+        console.log('something went wrong', status, err);
+      }
+    })
+  }).on("click", ".btn-clear", function(e) {
+    e.preventDefault();
+    let id = $(event.target).attr('data');
+    $.ajax({
+      method:"DELETE",
+      url: "/api/delete" + id,
+      success: (res) => {
+        console.log(res);
+        let items = $('#burger-section');
+        let row = $(".row-" + id);
+        row.empty();
       },
       error: (res, status, err) => {
         console.log('something went wrong', status, err);
