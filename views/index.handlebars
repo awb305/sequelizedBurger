@@ -1,11 +1,14 @@
 c
 <div class="container">
     <div class="row">
-        <div class="col">
-            <img src="/assets/img/burger.jpg" alt="burger">
+        <div class="col" id="image">
+            <img src="/assets/img/head-shot.png" alt="burger">
         </div>
     </div>
-    <h3>Eat-Da-Burger!</h3>
+    <h3>To Do List</h3>
+    <div id="clear-button-container">
+    <button type="submit" class="btn btn-primary" id="clear">Clear List</button>
+    </div>
     <div class="row" id="burger-section">
         {{!-- items --}}
     </div>
@@ -16,9 +19,8 @@ c
                     <textarea class="form-control" id="burger-name" rows="3"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" id="submit">Submit</button>
-                <h6>Enter a burger you want to eat. Click the "Submit" button. Hey</h6>
+                <h6>Enter your to-do item in the text box and press "Submit"</h6>
             </form>
         </div>
     </div>
-    <button type="submit" class="btn btn-primary" id="clear">Clear List</button>
 </div>

@@ -12,9 +12,25 @@
 }
 
 img {
-    height: 10rem;
-    width: 10rem;
-    border-radius: 4rem;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 1rem;
+    align-self: center
 }
 
-/*test*/
+#image, h3, .col-sm-4 {
+    text-align: center;
+}
+
+button {
+    margin: 0px 5px 0px 5px
+}
+
+.row {
+    margin: 3rem;
+    text-align: center;
+}
+
+#clear-button-container{
+    text-align: center;
+}

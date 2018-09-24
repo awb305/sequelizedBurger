@@ -24,7 +24,7 @@ const createBurger = (id, burger_name) => {
   let button = $("<button>");
   button.attr("data", id);
   button.addClass("btn btn-primary btn-devour");
-  button.text("Devour it!");
+  button.text("Finished!");
   $("#button-item-" + id).append(button);
 
   let clearButton = $("<button>");
