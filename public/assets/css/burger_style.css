@@ -34,3 +34,7 @@ button {
 #clear-button-container{
     text-align: center;
 }
+
+pre{
+    visibility: hidden;
+}
