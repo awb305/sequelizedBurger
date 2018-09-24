@@ -112,6 +112,21 @@ $(function () {
         console.log('something went wrong', status, err)
       }
     });
+  }).on("click", "#clear", function(e) {
+    e.preventDefault();
+    
+    $.ajax({
+      method:"DELETE",
+      url: "/api/delete",
+      success: (res) => {
+        console.log(res);
+        let items = $('#burger-section');
+        items.empty();
+      },
+      error: (res, status, err) => {
+        console.log('something went wrong', status, err);
+      }
+    })
   });
 });
 

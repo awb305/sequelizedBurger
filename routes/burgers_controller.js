@@ -48,6 +48,14 @@ router.put("/api/burgers/:id", function (req, res) {
 
 });
 
+router.delete("/api/delete", function (req, res) {
+  db.Burgers.destroy({
+    where: {}
+  }).then(function(dbDelete){
+    res.json(dbDelete);
+  })
+})
+
 
 // Export routes for server.js to use.
 module.exports = router;
